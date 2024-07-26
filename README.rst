@@ -46,7 +46,7 @@ Installing `flower` with `pip <http://www.pip-installer.org/>`_ is simple ::
 
 The development version can be installed from Github ::
 
-    $ pip install https://github.com/mher/flower/zipball/master#egg=flower
+    $ pip install https://github.com/rishabhkanojiya/flower/zipball/master#egg=flower
 
 Usage
 -----
