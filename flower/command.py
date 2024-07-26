@@ -129,6 +129,10 @@ def extract_settings():
         for name in ['login_url', 'static_url_prefix']:
             settings[name] = prepend_url(settings[name], options.url_prefix)
 
+    if options.static_url_prefix:
+        for name in ['static_url_prefix']:
+            settings[name] = prepend_url(settings[name], options.static_url_prefix)
+
     if options.auth:
         settings['oauth'] = {
             'key': options.oauth2_key or os.environ.get('FLOWER_OAUTH2_KEY'),

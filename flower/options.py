@@ -66,6 +66,7 @@ define("tasks_columns", type=str,
        help="slugs of columns on /tasks/ page, delimited by comma")
 define("auth_provider", default=None, type=str, help="auth handler class")
 define("url_prefix", type=str, help="base url prefix")
+define("static_url_prefix", type=str, help="base static url prefix")
 define("task_runtime_metric_buckets", type=float, default=Histogram.DEFAULT_BUCKETS,
        multiple=True, help="histogram latency bucket value")
 
