@@ -12,9 +12,9 @@ from .views.workers import WorkersView, WorkerView
 
 settings = dict(
     template_path=os.path.join(os.path.dirname(__file__), "templates"),
-    static_path=os.path.join(os.path.dirname(__file__), "static"),
+    static_path=os.path.join(os.path.dirname(__file__), "monitor/static"),
     cookie_secret=gen_cookie_secret(),
-    static_url_prefix='/static/',
+    static_url_prefix='/monitor/static/',
     login_url='/login',
 )
 
