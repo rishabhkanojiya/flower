@@ -12,7 +12,7 @@ from .views.workers import WorkersView, WorkerView
 
 settings = dict(
     template_path=os.path.join(os.path.dirname(__file__), "templates"),
-    static_path=os.path.join(os.path.dirname(__file__), "monitor/static"),
+    static_path=os.path.join(os.path.dirname(__file__), "static"),
     cookie_secret=gen_cookie_secret(),
     static_url_prefix='/static/',
     login_url='/login',
@@ -55,7 +55,7 @@ handlers = [
     (r"/metrics", monitor.Metrics),
     (r"/healthcheck", monitor.Healthcheck),
     # Static
-    (r"/static/(.*)", StaticFileHandler,
+    (r"/monitor/static/(.*)", StaticFileHandler,
      {"path": settings['static_path']}),
     # Auth
     (r"/login", auth.LoginHandler),
